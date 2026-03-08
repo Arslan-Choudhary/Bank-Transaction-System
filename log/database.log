@@ -1,0 +1,12 @@
+07-3-2026 11:03:39 PM error: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+    at new ConnectionString (C:\code\Backend\Bank Transactions\node_modules\mongodb-connection-string-url\lib\index.js:85:19)
+    at parseOptions (C:\code\Backend\Bank Transactions\node_modules\mongodb\lib\connection_string.js:197:17)
+    at new MongoClient (C:\code\Backend\Bank Transactions\node_modules\mongodb\lib\mongo_client.js:67:61)
+    at NativeConnection.createClient (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\drivers\node-mongodb-native\connection.js:334:14)
+    at NativeConnection.openUri (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\connection.js:1075:34)
+    at Mongoose.connect (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\mongoose.js:471:15)
+    at connectDB (file:///C:/code/Backend/Bank%20Transactions/src/connections/dbConnect.js:8:47)
+    at file:///C:/code/Backend/Bank%20Transactions/src/app.js:11:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:345:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
