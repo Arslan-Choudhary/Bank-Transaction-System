@@ -1,0 +1,71 @@
+09-3-2026 07:22:32 AM error: Cannot destructure property 'email' of 'req.body' as it is undefined.
+TypeError: Cannot destructure property 'email' of 'req.body' as it is undefined.
+    at userRegisterController (file:///C:/code/Backend/Bank%20Transactions/src/controllers/auth.controller.js:11:15)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:117:3)
+    at handle (C:\code\Backend\Bank Transactions\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at C:\code\Backend\Bank Transactions\node_modules\router\index.js:295:15
+    at processParams (C:\code\Backend\Bank Transactions\node_modules\router\index.js:582:12)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\index.js:291:5)
+    at Function.handle (C:\code\Backend\Bank Transactions\node_modules\router\index.js:186:3)
+09-3-2026 07:28:56 AM error: User already exists
+Error: User already exists
+    at UserServices.UserRegister (file:///C:/code/Backend/Bank%20Transactions/src/app/services/auth.services.js:8:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async userRegisterController (file:///C:/code/Backend/Bank%20Transactions/src/controllers/auth.controller.js:13:31)
+10-3-2026 06:28:00 AM error: User already exists
+Error: User already exists
+    at UserServices.UserRegister (file:///C:/code/Backend/Bank%20Transactions/src/app/services/auth.services.js:10:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async userRegisterController (file:///C:/code/Backend/Bank%20Transactions/src/controllers/auth.controller.js:13:31)
+10-3-2026 06:29:17 AM error: user.comparePassword is not a function
+TypeError: user.comparePassword is not a function
+    at UserServices.UserLogin (file:///C:/code/Backend/Bank%20Transactions/src/app/services/auth.services.js:31:40)
+    at userLoginController (file:///C:/code/Backend/Bank%20Transactions/src/controllers/auth.controller.js:49:50)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:117:3)
+    at handle (C:\code\Backend\Bank Transactions\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at C:\code\Backend\Bank Transactions\node_modules\router\index.js:295:15
+    at processParams (C:\code\Backend\Bank Transactions\node_modules\router\index.js:582:12)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\index.js:291:5)
+10-3-2026 06:30:24 AM error: user.comparePassword is not a function
+TypeError: user.comparePassword is not a function
+    at UserServices.UserLogin (file:///C:/code/Backend/Bank%20Transactions/src/app/services/auth.services.js:31:40)
+    at userLoginController (file:///C:/code/Backend/Bank%20Transactions/src/controllers/auth.controller.js:49:50)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:117:3)
+    at handle (C:\code\Backend\Bank Transactions\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at C:\code\Backend\Bank Transactions\node_modules\router\index.js:295:15
+    at processParams (C:\code\Backend\Bank Transactions\node_modules\router\index.js:582:12)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\index.js:291:5)
+10-3-2026 06:31:19 AM error: Illegal arguments: string, undefined
+Error: Illegal arguments: string, undefined
+    at _async (file:///C:/code/Backend/Bank%20Transactions/node_modules/bcryptjs/index.js:252:11)
+    at file:///C:/code/Backend/Bank%20Transactions/node_modules/bcryptjs/index.js:280:7
+    at new Promise (<anonymous>)
+    at Object.compare (file:///C:/code/Backend/Bank%20Transactions/node_modules/bcryptjs/index.js:279:12)
+    at userSchema.methods.comparePassword (file:///C:/code/Backend/Bank%20Transactions/src/models/user.model.js:36:23)
+    at UserServices.UserLogin (file:///C:/code/Backend/Bank%20Transactions/src/app/services/auth.services.js:31:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async userLoginController (file:///C:/code/Backend/Bank%20Transactions/src/controllers/auth.controller.js:49:31)
+10-3-2026 06:32:55 AM error: Illegal arguments: string, undefined
+Error: Illegal arguments: string, undefined
+    at _async (file:///C:/code/Backend/Bank%20Transactions/node_modules/bcryptjs/index.js:252:11)
+    at file:///C:/code/Backend/Bank%20Transactions/node_modules/bcryptjs/index.js:280:7
+    at new Promise (<anonymous>)
+    at Object.compare (file:///C:/code/Backend/Bank%20Transactions/node_modules/bcryptjs/index.js:279:12)
+    at userSchema.methods.comparePassword (file:///C:/code/Backend/Bank%20Transactions/src/models/user.model.js:36:23)
+    at UserServices.UserLogin (file:///C:/code/Backend/Bank%20Transactions/src/app/services/auth.services.js:31:40)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async userLoginController (file:///C:/code/Backend/Bank%20Transactions/src/controllers/auth.controller.js:49:31)
+10-3-2026 06:45:40 AM error: User already exists
+Error: User already exists
+    at UserServices.UserRegister (file:///C:/code/Backend/Bank%20Transactions/src/app/services/auth.services.js:10:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async userRegisterController (file:///C:/code/Backend/Bank%20Transactions/src/controllers/auth.controller.js:13:31)

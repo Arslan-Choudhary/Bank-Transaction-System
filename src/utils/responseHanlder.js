@@ -2,10 +2,10 @@ import { ServerResponse } from "#constants";
 import { Logger } from "#utils";
 
 class ResponseHandler {
-  static successHandler = (res, data) => {
+  static successHandler = (res, data, message) => {
     res.status(ServerResponse.API_STATUS_CODE.SUCCESS).json({
       status: ServerResponse.API_STATUS_CODE.SUCCESS,
-      message: ServerResponse.API_RESPONSE_MESSAGE.SUCCESS,
+      message: message || ServerResponse.API_RESPONSE_MESSAGE.SUCCESS,
       data: data ? data : "",
     });
   };
@@ -43,13 +43,17 @@ class ResponseHandler {
     data = null,
     message = ServerResponse.API_RESPONSE_MESSAGE.RATE_LIMIT,
   ) {
-    return res
-      .status(ServerResponse.API_STATUS_CODE.RATE_LIMIT)
-      .json({
-        status: ServerResponse.API_STATUS_CODE.RATE_LIMIT,
-        message,
-        data,
-      });
+    return res.status(ServerResponse.API_STATUS_CODE.RATE_LIMIT).json({
+      status: ServerResponse.API_STATUS_CODE.RATE_LIMIT,
+      message,
+      data,
+    });
+  }
+  static DuplicateEntry(res, message) {
+    return res.status(ServerResponse.API_STATUS_CODE.DUPLICATE_ENTRY).json({
+      status: ServerResponse.API_STATUS_CODE.DUPLICATE_ENTRY,
+      message,
+    });
   }
 }
 

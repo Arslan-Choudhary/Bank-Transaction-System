@@ -12,6 +12,8 @@ const ENV = {
   },
   port: env.PORT,
   CORS: env.CORS_ORIGIN,
+  JWT_SECRET: env.JWT_SECRET,
+  expiresIn: env.expiresIn,
 };
 
 export default ENV;

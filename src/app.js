@@ -10,7 +10,7 @@ const PORT = ENV.port;
 
 connectDB()
     .then(
-        app.listen(PORT || 8000, (error) =>
+        app.listen(PORT || 3000, (error) =>
             error
                 ? Logger.serverLogger.logError(error)
                 : console.log(`Server running on port ${PORT}`)
