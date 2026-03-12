@@ -1,5 +1,5 @@
 import { UserServices } from "#service";
-import { ResponseHandler } from "#utils";
+import { ResponseHandler, sendRegistrationEmail } from "#utils";
 
 class UserController {
   /**
@@ -31,6 +31,8 @@ class UserController {
       };
 
       ResponseHandler.createHandler(res, responseData);
+
+      await sendRegistrationEmail(user.email, user.name);
     } catch (error) {
       ResponseHandler.errorHandler(res, error);
       //   return res.status(500).json({ error: error });
@@ -62,9 +64,13 @@ class UserController {
         token: token,
       };
 
-      ResponseHandler.successHandler(res, responseData, "User Login Successfully");
+      ResponseHandler.successHandler(
+        res,
+        responseData,
+        "User Login Successfully",
+      );
     } catch (error) {
-      console.log(error)
+      console.log(error);
       ResponseHandler.errorHandler(res, error);
     }
   }

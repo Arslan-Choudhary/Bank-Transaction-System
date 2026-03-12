@@ -14,6 +14,10 @@ const ENV = {
   CORS: env.CORS_ORIGIN,
   JWT_SECRET: env.JWT_SECRET,
   expiresIn: env.expiresIn,
+  CLIENT_ID: env.CLIENT_ID,
+  CLIENT_SECRET: env.CLIENT_SECRET,
+  REFRESH_TOKEN: env.REFRESH_TOKEN,
+  EMAIL_USER: env.EMAIL_USER,
 };
 
 export default ENV;
