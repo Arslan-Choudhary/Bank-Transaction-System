@@ -38,6 +38,18 @@ class ResponseHandler {
       data: data ? data : "",
     });
   };
+  static authHandler(
+    res,
+    message = ServerResponse.API_RESPONSE_MESSAGE.AUTHORIZATION_FAILED,
+    status
+  ) {
+    return res
+      .status(status || ServerResponse.API_RESPONSE_MESSAGE.AUTHORIZATION_FAILED)
+      .json({
+        status: status ||ServerResponse.API_STATUS_CODE.AUTHORIZATION_FAILED,
+        message: message,
+      });
+  }
   static tooManyRequests(
     res,
     data = null,
