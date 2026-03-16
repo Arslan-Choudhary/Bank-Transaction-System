@@ -26,6 +26,23 @@ class TransactionController {
       ResponseHandler.errorHandler(res, error);
     }
   }
+
+  static async createInitialFundsTransaction(req, res) {
+    try {
+      const { toAccount, amount, idempotencyKey } = req.body;
+
+      // const userId = req.user._id;
+
+      await TransacrionService.createInitialFundsTransaction({
+        toAccount,
+        amount,
+        idempotencyKey,
+        userId: req.user._id,
+      });
+    } catch (error) {
+      ResponseHandler.errorHandler(res, error);
+    }
+  }
 }
 
 export default TransactionController;

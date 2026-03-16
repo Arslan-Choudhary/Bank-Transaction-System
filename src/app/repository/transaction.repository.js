@@ -5,6 +5,10 @@ class TransactionRepository {
     return await accountModel.findOne({ _id: accountId });
   }
 
+  static async findSystemUserAccount(userId) {
+    return await accountModel.findOne({ systemUser: true, user: userId });
+  }
+
   static async findTransactionByIdempotencyKey(IdempontencyKey) {
     return await transactionModel.findOne({ idempotencyKey: IdempontencyKey });
   }

@@ -1,5 +1,5 @@
 import app from "#server";
-import { userRouter, accountRouter } from "#routes";
+import { userRouter, accountRouter, transactionRoutes } from "#routes";
 
 app.get("/", (req, res) => {
   res.send("Backend is live and running");
@@ -11,3 +11,5 @@ app.get("/", (req, res) => {
 app.use("/api/auth", userRouter);
 
 app.use("/api/accounts", accountRouter);
+
+app.use("/api/transactions", transactionRoutes);

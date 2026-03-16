@@ -149,6 +149,39 @@ class TransacrionService {
      */
     //  await EmailServices.sendTransactionEmail(req.user.email)
   }
+
+  static async createInitialFundsTransaction({
+    toAccount,
+    amount,
+    idempotencyKey,
+    userId,
+  }) {
+    if (!toAccount || !amount || !idempotencyKey) {
+      const error = new Error(
+        "toAccount, amount and idempotencyKey are required",
+      );
+      error.status = 400;
+      throw error;
+    }
+
+    const toUserAccount =
+      await TransactionRepository.findAccountById(toAccount);
+
+    if (!toUserAccount) {
+      const error = new Error("Invalid toAccount");
+      error.status = 400;
+      throw error;
+    }
+
+    const fromUserAccount =
+      await TransactionRepository.findSystemUserAccount(userId);
+
+    if (!fromUserAccount) {
+      const error = new Error("System user account not found");
+      error.status = 400;
+      throw error;
+    }
+  }
 }
 
 export default TransacrionService;
