@@ -1,0 +1,84 @@
+15-3-2026 01:15:06 PM error: Unauthorized access, token is missing
+Error: Unauthorized access, token is missing
+    at ResponseHandler.authHandler (file:///C:/code/Backend/Bank%20Transactions/src/utils/responseHanlder.js:46:19)
+    at authMiddleware (file:///C:/code/Backend/Bank%20Transactions/src/middlewares/auth.middleware.js:10:21)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:117:3)
+    at handle (C:\code\Backend\Bank Transactions\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at C:\code\Backend\Bank Transactions\node_modules\router\index.js:295:15
+    at processParams (C:\code\Backend\Bank Transactions\node_modules\router\index.js:582:12)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\index.js:291:5)
+15-3-2026 01:16:27 PM error: Unauthorized access, token is missing
+Error: Unauthorized access, token is missing
+    at ResponseHandler.authHandler (file:///C:/code/Backend/Bank%20Transactions/src/utils/responseHanlder.js:46:19)
+    at authMiddleware (file:///C:/code/Backend/Bank%20Transactions/src/middlewares/auth.middleware.js:10:21)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:117:3)
+    at handle (C:\code\Backend\Bank Transactions\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at C:\code\Backend\Bank Transactions\node_modules\router\index.js:295:15
+    at processParams (C:\code\Backend\Bank Transactions\node_modules\router\index.js:582:12)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\index.js:291:5)
+15-3-2026 02:03:41 PM error: Unauthorized access, token is missing
+Error: Unauthorized access, token is missing
+    at ResponseHandler.authHandler (file:///C:/code/Backend/Bank%20Transactions/src/utils/responseHanlder.js:46:19)
+    at authMiddleware (file:///C:/code/Backend/Bank%20Transactions/src/middlewares/auth.middleware.js:10:21)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:117:3)
+    at handle (C:\code\Backend\Bank Transactions\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at C:\code\Backend\Bank Transactions\node_modules\router\index.js:295:15
+    at processParams (C:\code\Backend\Bank Transactions\node_modules\router\index.js:582:12)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\index.js:291:5)
+15-3-2026 02:05:16 PM error: Unauthorized access, token is missing
+Error: Unauthorized access, token is missing
+    at ResponseHandler.authHandler (file:///C:/code/Backend/Bank%20Transactions/src/utils/responseHanlder.js:46:19)
+    at authMiddleware (file:///C:/code/Backend/Bank%20Transactions/src/middlewares/auth.middleware.js:10:21)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:117:3)
+    at handle (C:\code\Backend\Bank Transactions\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at C:\code\Backend\Bank Transactions\node_modules\router\index.js:295:15
+    at processParams (C:\code\Backend\Bank Transactions\node_modules\router\index.js:582:12)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\index.js:291:5)
+15-3-2026 02:05:16 PM error: Unauthorized access, token is invalid
+Error: Unauthorized access, token is invalid
+    at ResponseHandler.authHandler (file:///C:/code/Backend/Bank%20Transactions/src/utils/responseHanlder.js:46:19)
+    at authMiddleware (file:///C:/code/Backend/Bank%20Transactions/src/middlewares/auth.middleware.js:26:21)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:117:3)
+    at handle (C:\code\Backend\Bank Transactions\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at C:\code\Backend\Bank Transactions\node_modules\router\index.js:295:15
+    at processParams (C:\code\Backend\Bank Transactions\node_modules\router\index.js:582:12)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\index.js:291:5)
+15-3-2026 02:12:16 PM error: Unauthorized access, token is missing
+Error: Unauthorized access, token is missing
+    at ResponseHandler.authHandler (file:///C:/code/Backend/Bank%20Transactions/src/utils/responseHanlder.js:46:19)
+    at authMiddleware (file:///C:/code/Backend/Bank%20Transactions/src/middlewares/auth.middleware.js:10:21)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:117:3)
+    at handle (C:\code\Backend\Bank Transactions\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at C:\code\Backend\Bank Transactions\node_modules\router\index.js:295:15
+    at processParams (C:\code\Backend\Bank Transactions\node_modules\router\index.js:582:12)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\index.js:291:5)
+15-3-2026 02:12:16 PM error: Unauthorized access, token is invalid
+Error: Unauthorized access, token is invalid
+    at ResponseHandler.authHandler (file:///C:/code/Backend/Bank%20Transactions/src/utils/responseHanlder.js:46:19)
+    at authMiddleware (file:///C:/code/Backend/Bank%20Transactions/src/middlewares/auth.middleware.js:26:21)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:117:3)
+    at handle (C:\code\Backend\Bank Transactions\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at C:\code\Backend\Bank Transactions\node_modules\router\index.js:295:15
+    at processParams (C:\code\Backend\Bank Transactions\node_modules\router\index.js:582:12)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\index.js:291:5)

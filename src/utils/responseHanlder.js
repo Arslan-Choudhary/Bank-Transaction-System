@@ -41,12 +41,19 @@ class ResponseHandler {
   static authHandler(
     res,
     message = ServerResponse.API_RESPONSE_MESSAGE.AUTHORIZATION_FAILED,
-    status
+    status = ServerResponse.API_STATUS_CODE.AUTHORIZATION_FAILED,
   ) {
+    const error = new Error(message);
+    error.status =
+      status;
+
+    Logger.authLogger.logError(error);
     return res
-      .status(status || ServerResponse.API_RESPONSE_MESSAGE.AUTHORIZATION_FAILED)
+      .status(
+        status || ServerResponse.API_RESPONSE_MESSAGE.AUTHORIZATION_FAILED,
+      )
       .json({
-        status: status ||ServerResponse.API_STATUS_CODE.AUTHORIZATION_FAILED,
+        status: status,
         message: message,
       });
   }

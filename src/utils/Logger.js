@@ -77,6 +77,16 @@ const Logger = {
       logToMain("Error", "database");
     },
   },
+  authLogger: {
+    logSuccess: function (message) {
+      createMyLogger("auth").info(message);
+      logToMain("Success", "auth");
+    },
+    logError: function (error) {
+      createMyLogger("auth").error(`${error.message}\n${error.stack}`);
+      logToMain("Error", "auth");
+    },
+  },
   generalLogger: {
     logSuccess: function (message) {
       createMyLogger("general").info(message);

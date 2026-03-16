@@ -141,3 +141,20 @@ ValidationError: account validation failed: user: Account must be associated wit
     at async Kareem.execPre (C:\code\Backend\Bank Transactions\node_modules\kareem\index.js:70:24)
     at async model.$__save (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\model.js:376:5)
     at async model.save (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\model.js:642:5)
+15-3-2026 01:10:53 PM error: account validation failed: user: Account must be associated with a user
+ValidationError: account validation failed: user: Account must be associated with a user
+    at Document.invalidate (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\document.js:3420:32)
+    at validatePath (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\document.js:3192:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Promise.all (index 0)
+    at async model.$__validate (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\document.js:3133:3)
+    at async model.validate (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\document.js:2702:5)
+    at async model.validateBeforeSavePreSave (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\plugins\validateBeforeSave.js:39:5)
+    at async Kareem.execPre (C:\code\Backend\Bank Transactions\node_modules\kareem\index.js:70:24)
+    at async model.$__save (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\model.js:376:5)
+    at async model.save (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\model.js:642:5)
+15-3-2026 02:12:24 PM error: Account already exists for this user
+Error: Account already exists for this user
+    at AccountServices.createAccount (file:///C:/code/Backend/Bank%20Transactions/src/app/services/account.service.js:8:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async createAccount (file:///C:/code/Backend/Bank%20Transactions/src/controllers/account.contoller.js:9:23)

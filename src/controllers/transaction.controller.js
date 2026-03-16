@@ -1,0 +1,31 @@
+import { TransacrionService } from "#service";
+import { EmailServices, ResponseHandler } from "#utils";
+
+class TransactionController {
+  static async createTransaction(req, res) {
+    try {
+      const { fromAccount, toAccount, amount, idempotencyKey } = req.body;
+
+      const { transaction, message } =
+        await TransacrionService.createTransaction({
+          fromAccount,
+          toAccount,
+          amount,
+          idempotencyKey,
+        });
+
+      await EmailServices.sendTransactionEmail(
+        req.user.email,
+        req.user.name,
+        amount,
+        toAccount,
+      );
+
+      ResponseHandler.createHandler(res, transaction, message);
+    } catch (error) {
+      ResponseHandler.errorHandler(res, error);
+    }
+  }
+}
+
+export default TransactionController;

@@ -1,5 +1,5 @@
 import { UserServices } from "#service";
-import { ResponseHandler, sendRegistrationEmail } from "#utils";
+import { ResponseHandler, EmailServices } from "#utils";
 
 class UserController {
   /**
@@ -32,7 +32,7 @@ class UserController {
 
       ResponseHandler.createHandler(res, responseData);
 
-      await sendRegistrationEmail(user.email, user.name);
+      await EmailServices.sendRegistrationEmail(user.email, user.name);
     } catch (error) {
       ResponseHandler.errorHandler(res, error);
       //   return res.status(500).json({ error: error });

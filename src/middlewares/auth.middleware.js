@@ -4,7 +4,7 @@ import { ResponseHandler } from "#utils";
 import jwt from "jsonwebtoken";
 
 async function authMiddleware(req, res, next) {
-  const token = req.cookies.token || req.headers.authorization?.split("")[1];
+  const token = req.cookies.token || req.headers.authorization?.split(" ")[1];
 
   if (!token) {
     ResponseHandler.authHandler(res, "Unauthorized access, token is missing");
