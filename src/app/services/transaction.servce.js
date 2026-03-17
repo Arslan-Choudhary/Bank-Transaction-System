@@ -181,6 +181,52 @@ class TransacrionService {
       error.status = 400;
       throw error;
     }
+
+    const session = await mongoose.startSession();
+    session.startTransaction();
+
+    const transaction = await TransactionRepository.createTransaction(
+      {
+        fromAccount: fromUserAccount._id,
+        toAccount,
+        amount,
+        idempotencyKey,
+        status: "PENDING",
+      },
+      session,
+    );
+
+    const debitLedgerEntry = await LedgerRepository.createLedger(
+      {
+        account: fromUserAccount._id,
+        amount,
+        transaction: transaction._id,
+        type: "DEBIT",
+      },
+      session,
+    );
+
+    const creditLedgerEntry = await LedgerRepository.createLedger(
+      {
+        account: toAccount,
+        amount,
+        transaction: transaction._id,
+        type: "CREDIT",
+      },
+      session,
+    );
+
+    transaction.status = "COMPLETED";
+
+    await transaction.save({ session });
+
+    await session.commitTransaction();
+    session.endSession();
+
+    return {
+      transaction,
+      message: "Initial funds transaction completed successfully",
+    };
   }
 }
 

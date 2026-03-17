@@ -82,3 +82,69 @@ Error: Unauthorized access, token is invalid
     at C:\code\Backend\Bank Transactions\node_modules\router\index.js:295:15
     at processParams (C:\code\Backend\Bank Transactions\node_modules\router\index.js:582:12)
     at next (C:\code\Backend\Bank Transactions\node_modules\router\index.js:291:5)
+16-3-2026 07:23:49 PM error: Unauthorized access, token is invalid
+Error: Unauthorized access, token is invalid
+    at ResponseHandler.authHandler (file:///C:/code/Backend/Bank%20Transactions/src/utils/responseHanlder.js:46:19)
+    at authSystemUserMiddleware (file:///C:/code/Backend/Bank%20Transactions/src/middlewares/auth.middleware.js:56:21)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:117:3)
+    at handle (C:\code\Backend\Bank Transactions\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at C:\code\Backend\Bank Transactions\node_modules\router\index.js:295:15
+    at processParams (C:\code\Backend\Bank Transactions\node_modules\router\index.js:582:12)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\index.js:291:5)
+16-3-2026 07:24:32 PM error: Unauthorized access, token is invalid
+Error: Unauthorized access, token is invalid
+    at ResponseHandler.authHandler (file:///C:/code/Backend/Bank%20Transactions/src/utils/responseHanlder.js:46:19)
+    at authSystemUserMiddleware (file:///C:/code/Backend/Bank%20Transactions/src/middlewares/auth.middleware.js:56:21)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:117:3)
+    at handle (C:\code\Backend\Bank Transactions\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at C:\code\Backend\Bank Transactions\node_modules\router\index.js:295:15
+    at processParams (C:\code\Backend\Bank Transactions\node_modules\router\index.js:582:12)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\index.js:291:5)
+16-3-2026 07:26:06 PM error: Unauthorized access, token is invalid
+Error: Unauthorized access, token is invalid
+    at ResponseHandler.authHandler (file:///C:/code/Backend/Bank%20Transactions/src/utils/responseHanlder.js:46:19)
+    at authSystemUserMiddleware (file:///C:/code/Backend/Bank%20Transactions/src/middlewares/auth.middleware.js:57:21)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:157:13)
+    at Route.dispatch (C:\code\Backend\Bank Transactions\node_modules\router\lib\route.js:117:3)
+    at handle (C:\code\Backend\Bank Transactions\node_modules\router\index.js:435:11)
+    at Layer.handleRequest (C:\code\Backend\Bank Transactions\node_modules\router\lib\layer.js:152:17)
+    at C:\code\Backend\Bank Transactions\node_modules\router\index.js:295:15
+    at processParams (C:\code\Backend\Bank Transactions\node_modules\router\index.js:582:12)
+    at next (C:\code\Backend\Bank Transactions\node_modules\router\index.js:291:5)
+16-3-2026 07:29:04 PM error: Forbidden access, not a system user
+Error: Forbidden access, not a system user
+    at ResponseHandler.authHandler (file:///C:/code/Backend/Bank%20Transactions/src/utils/responseHanlder.js:46:19)
+    at authSystemUserMiddleware (file:///C:/code/Backend/Bank%20Transactions/src/middlewares/auth.middleware.js:43:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+16-3-2026 07:29:51 PM error: Forbidden access, not a system user
+Error: Forbidden access, not a system user
+    at ResponseHandler.authHandler (file:///C:/code/Backend/Bank%20Transactions/src/utils/responseHanlder.js:46:19)
+    at authSystemUserMiddleware (file:///C:/code/Backend/Bank%20Transactions/src/middlewares/auth.middleware.js:43:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+16-3-2026 07:32:53 PM error: Forbidden access, not a system user
+Error: Forbidden access, not a system user
+    at ResponseHandler.authHandler (file:///C:/code/Backend/Bank%20Transactions/src/utils/responseHanlder.js:46:19)
+    at authSystemUserMiddleware (file:///C:/code/Backend/Bank%20Transactions/src/middlewares/auth.middleware.js:43:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+17-3-2026 05:58:13 AM error: Unauthorized access, token is invalid
+Error: Unauthorized access, token is invalid
+    at ResponseHandler.authHandler (file:///C:/code/Backend/Bank%20Transactions/src/utils/responseHanlder.js:46:19)
+    at authSystemUserMiddleware (file:///C:/code/Backend/Bank%20Transactions/src/middlewares/auth.middleware.js:55:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+17-3-2026 06:00:48 AM error: Forbidden access, not a system user
+Error: Forbidden access, not a system user
+    at ResponseHandler.authHandler (file:///C:/code/Backend/Bank%20Transactions/src/utils/responseHanlder.js:46:19)
+    at authSystemUserMiddleware (file:///C:/code/Backend/Bank%20Transactions/src/middlewares/auth.middleware.js:43:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+17-3-2026 06:07:34 AM error: User not exists with this token
+Error: User not exists with this token
+    at ResponseHandler.authHandler (file:///C:/code/Backend/Bank%20Transactions/src/utils/responseHanlder.js:46:19)
+    at authMiddleware (file:///C:/code/Backend/Bank%20Transactions/src/middlewares/auth.middleware.js:19:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)

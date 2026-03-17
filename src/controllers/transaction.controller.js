@@ -33,12 +33,15 @@ class TransactionController {
 
       // const userId = req.user._id;
 
-      await TransacrionService.createInitialFundsTransaction({
-        toAccount,
-        amount,
-        idempotencyKey,
-        userId: req.user._id,
-      });
+      const { transaction, message } =
+        await TransacrionService.createInitialFundsTransaction({
+          toAccount,
+          amount,
+          idempotencyKey,
+          userId: req.user._id,
+        });
+
+      ResponseHandler.createHandler(res, transaction, message);
     } catch (error) {
       ResponseHandler.errorHandler(res, error);
     }

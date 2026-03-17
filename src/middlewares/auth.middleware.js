@@ -37,9 +37,7 @@ export async function authSystemUserMiddleware(req, res, next) {
   try {
     const decoded = jwt.verify(token, ENV.JWT_SECRET);
 
-    const user = await UserRepository.FindUserById(decoded._id).select(
-      "+systemUser",
-    );
+    const user = await UserRepository.FindUserById(decoded._id, "+systemUser");
 
     if (!user.systemUser) {
       ResponseHandler.authHandler(
@@ -53,6 +51,7 @@ export async function authSystemUserMiddleware(req, res, next) {
 
     return next();
   } catch (error) {
+    // console.log(error);
     ResponseHandler.authHandler(
       res,
       "Unauthorized access, token is invalid",

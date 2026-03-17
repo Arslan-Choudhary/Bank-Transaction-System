@@ -6,7 +6,7 @@ class TransactionRepository {
   }
 
   static async findSystemUserAccount(userId) {
-    return await accountModel.findOne({ systemUser: true, user: userId });
+    return await accountModel.findOne({ user: userId });
   }
 
   static async findTransactionByIdempotencyKey(IdempontencyKey) {
@@ -14,7 +14,8 @@ class TransactionRepository {
   }
 
   static async createTransaction(data, session) {
-    return await transactionModel.create(data, { session });
+    const [transaction] = await transactionModel.create([data], { session });
+    return transaction;
   }
 }
 

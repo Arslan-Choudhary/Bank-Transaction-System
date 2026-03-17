@@ -158,3 +158,128 @@ Error: Account already exists for this user
     at AccountServices.createAccount (file:///C:/code/Backend/Bank%20Transactions/src/app/services/account.service.js:8:21)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
     at async createAccount (file:///C:/code/Backend/Bank%20Transactions/src/controllers/account.contoller.js:9:23)
+16-3-2026 07:17:56 PM error: Account already exists for this user
+Error: Account already exists for this user
+    at AccountServices.createAccount (file:///C:/code/Backend/Bank%20Transactions/src/app/services/account.service.js:8:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async createAccount (file:///C:/code/Backend/Bank%20Transactions/src/controllers/account.contoller.js:9:23)
+16-3-2026 07:18:53 PM error: User already exists
+Error: User already exists
+    at UserServices.UserRegister (file:///C:/code/Backend/Bank%20Transactions/src/app/services/auth.services.js:10:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async userRegisterController (file:///C:/code/Backend/Bank%20Transactions/src/controllers/auth.controller.js:13:31)
+16-3-2026 07:30:25 PM error: Invalid toAccount
+Error: Invalid toAccount
+    at TransacrionService.createInitialFundsTransaction (file:///C:/code/Backend/Bank%20Transactions/src/app/services/transaction.servce.js:171:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async createInitialFundsTransaction (file:///C:/code/Backend/Bank%20Transactions/src/controllers/transaction.controller.js:37:9)
+16-3-2026 07:30:50 PM error: Invalid toAccount
+Error: Invalid toAccount
+    at TransacrionService.createInitialFundsTransaction (file:///C:/code/Backend/Bank%20Transactions/src/app/services/transaction.servce.js:171:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async createInitialFundsTransaction (file:///C:/code/Backend/Bank%20Transactions/src/controllers/transaction.controller.js:37:9)
+16-3-2026 07:33:20 PM error: Invalid toAccount
+Error: Invalid toAccount
+    at TransacrionService.createInitialFundsTransaction (file:///C:/code/Backend/Bank%20Transactions/src/app/services/transaction.servce.js:171:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async createInitialFundsTransaction (file:///C:/code/Backend/Bank%20Transactions/src/controllers/transaction.controller.js:37:9)
+16-3-2026 07:35:28 PM error: Invalid toAccount
+Error: Invalid toAccount
+    at TransacrionService.createInitialFundsTransaction (file:///C:/code/Backend/Bank%20Transactions/src/app/services/transaction.servce.js:171:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async createInitialFundsTransaction (file:///C:/code/Backend/Bank%20Transactions/src/controllers/transaction.controller.js:37:9)
+16-3-2026 07:35:48 PM error: System user account not found
+Error: System user account not found
+    at TransacrionService.createInitialFundsTransaction (file:///C:/code/Backend/Bank%20Transactions/src/app/services/transaction.servce.js:180:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async createInitialFundsTransaction (file:///C:/code/Backend/Bank%20Transactions/src/controllers/transaction.controller.js:37:9)
+16-3-2026 07:37:19 PM error: Transaction validation failed: idempotencyKey: Idempotency Key is required for creating a transaction, amount: Amount is required for creating a transaction, toAccount: Transaction must be associated with a to account, fromAccount: Transaction must be associated with a from account
+ValidationError: Transaction validation failed: idempotencyKey: Idempotency Key is required for creating a transaction, amount: Amount is required for creating a transaction, toAccount: Transaction must be associated with a to account, fromAccount: Transaction must be associated with a from account
+    at Document.invalidate (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\document.js:3420:32)
+    at validatePath (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\document.js:3192:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Promise.all (index 0)
+    at async model.$__validate (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\document.js:3133:3)
+    at async model.validate (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\document.js:2702:5)
+    at async model.validateBeforeSavePreSave (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\plugins\validateBeforeSave.js:39:5)
+    at async Kareem.execPre (C:\code\Backend\Bank Transactions\node_modules\kareem\index.js:70:24)
+    at async model.$__save (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\model.js:376:5)
+    at async model.save (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\model.js:642:5)
+17-3-2026 05:47:06 AM error: Transaction validation failed: idempotencyKey: Idempotency Key is required for creating a transaction, amount: Amount is required for creating a transaction, toAccount: Transaction must be associated with a to account, fromAccount: Transaction must be associated with a from account
+ValidationError: Transaction validation failed: idempotencyKey: Idempotency Key is required for creating a transaction, amount: Amount is required for creating a transaction, toAccount: Transaction must be associated with a to account, fromAccount: Transaction must be associated with a from account
+    at Document.invalidate (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\document.js:3420:32)
+    at validatePath (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\document.js:3192:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Promise.all (index 0)
+    at async model.$__validate (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\document.js:3133:3)
+    at async model.validate (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\document.js:2702:5)
+    at async model.validateBeforeSavePreSave (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\plugins\validateBeforeSave.js:39:5)
+    at async Kareem.execPre (C:\code\Backend\Bank Transactions\node_modules\kareem\index.js:70:24)
+    at async model.$__save (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\model.js:376:5)
+    at async model.save (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\model.js:642:5)
+17-3-2026 05:52:48 AM error: Transaction validation failed: idempotencyKey: Idempotency Key is required for creating a transaction, amount: Amount is required for creating a transaction, toAccount: Transaction must be associated with a to account, fromAccount: Transaction must be associated with a from account
+ValidationError: Transaction validation failed: idempotencyKey: Idempotency Key is required for creating a transaction, amount: Amount is required for creating a transaction, toAccount: Transaction must be associated with a to account, fromAccount: Transaction must be associated with a from account
+    at Document.invalidate (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\document.js:3420:32)
+    at validatePath (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\document.js:3192:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Promise.all (index 0)
+    at async model.$__validate (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\document.js:3133:3)
+    at async model.validate (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\document.js:2702:5)
+    at async model.validateBeforeSavePreSave (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\plugins\validateBeforeSave.js:39:5)
+    at async Kareem.execPre (C:\code\Backend\Bank Transactions\node_modules\kareem\index.js:70:24)
+    at async model.$__save (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\model.js:376:5)
+    at async model.save (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\model.js:642:5)
+17-3-2026 05:55:58 AM error: Transaction numbers are only allowed on a replica set member or mongos
+MongoServerError: Transaction numbers are only allowed on a replica set member or mongos
+    at Connection.sendCommand (C:\code\Backend\Bank Transactions\node_modules\mongodb\lib\cmap\connection.js:320:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Connection.command (C:\code\Backend\Bank Transactions\node_modules\mongodb\lib\cmap\connection.js:344:26)
+    at async Server.command (C:\code\Backend\Bank Transactions\node_modules\mongodb\lib\sdam\server.js:208:29)
+    at async tryOperation (C:\code\Backend\Bank Transactions\node_modules\mongodb\lib\operations\execute_operation.js:215:32)
+    at async executeOperation (C:\code\Backend\Bank Transactions\node_modules\mongodb\lib\operations\execute_operation.js:80:16)
+    at async Collection.insertOne (C:\code\Backend\Bank Transactions\node_modules\mongodb\lib\collection.js:154:16)
+    at async model.$__save (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\model.js:405:16)
+    at async model.save (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\model.js:642:5)
+    at async C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\model.js:2778:9
+17-3-2026 05:58:24 AM error: Email or Passwrod is INVALID
+Error: Email or Passwrod is INVALID
+    at UserServices.UserLogin (file:///C:/code/Backend/Bank%20Transactions/src/app/services/auth.services.js:27:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async userLoginController (file:///C:/code/Backend/Bank%20Transactions/src/controllers/auth.controller.js:51:31)
+17-3-2026 05:59:24 AM error: Email or Passwrod is INVALID
+Error: Email or Passwrod is INVALID
+    at UserServices.UserLogin (file:///C:/code/Backend/Bank%20Transactions/src/app/services/auth.services.js:27:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async userLoginController (file:///C:/code/Backend/Bank%20Transactions/src/controllers/auth.controller.js:51:31)
+17-3-2026 06:02:04 AM error: System user account not found
+Error: System user account not found
+    at TransacrionService.createInitialFundsTransaction (file:///C:/code/Backend/Bank%20Transactions/src/app/services/transaction.servce.js:181:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async createInitialFundsTransaction (file:///C:/code/Backend/Bank%20Transactions/src/controllers/transaction.controller.js:37:9)
+17-3-2026 06:02:32 AM error: System user account not found
+Error: System user account not found
+    at TransacrionService.createInitialFundsTransaction (file:///C:/code/Backend/Bank%20Transactions/src/app/services/transaction.servce.js:181:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async createInitialFundsTransaction (file:///C:/code/Backend/Bank%20Transactions/src/controllers/transaction.controller.js:37:9)
+17-3-2026 06:07:41 AM error: Email or Passwrod is INVALID
+Error: Email or Passwrod is INVALID
+    at UserServices.UserLogin (file:///C:/code/Backend/Bank%20Transactions/src/app/services/auth.services.js:27:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async userLoginController (file:///C:/code/Backend/Bank%20Transactions/src/controllers/auth.controller.js:51:31)
+17-3-2026 06:09:20 AM error: Invalid toAccount
+Error: Invalid toAccount
+    at TransacrionService.createInitialFundsTransaction (file:///C:/code/Backend/Bank%20Transactions/src/app/services/transaction.servce.js:172:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async createInitialFundsTransaction (file:///C:/code/Backend/Bank%20Transactions/src/controllers/transaction.controller.js:37:9)
+17-3-2026 06:10:00 AM error: Ledger validation failed: type: Ledger must be required, transaction: Ledger must be accociated with a transaction, amount: Amount is required for creating a ledger entry, account: Ledger must be associated with an account
+ValidationError: Ledger validation failed: type: Ledger must be required, transaction: Ledger must be accociated with a transaction, amount: Amount is required for creating a ledger entry, account: Ledger must be associated with an account
+    at Document.invalidate (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\document.js:3420:32)
+    at validatePath (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\document.js:3192:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Promise.all (index 0)
+    at async model.$__validate (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\document.js:3133:3)
+    at async model.validate (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\document.js:2702:5)
+    at async model.validateBeforeSavePreSave (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\plugins\validateBeforeSave.js:39:5)
+    at async Kareem.execPre (C:\code\Backend\Bank Transactions\node_modules\kareem\index.js:70:24)
+    at async model.$__save (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\model.js:376:5)
+    at async model.save (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\model.js:642:5)

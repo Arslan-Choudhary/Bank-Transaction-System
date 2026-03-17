@@ -9,8 +9,8 @@ class UserRepository {
     return await userModel.findOne({ email }).select("+password");
   }
 
-  static async FindUserById(id) {
-    return await userModel.findById(id);
+  static async FindUserById(id, select = "") {
+    return await userModel.findById(id).select(select);
   }
 
   static async createUser(data) {
