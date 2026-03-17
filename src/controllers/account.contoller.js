@@ -17,6 +17,20 @@ class AccountController {
       ResponseHandler.errorHandler(res, error);
     }
   }
+
+  static async getUserAccountsController(req, res) {
+    try {
+      const accounts = await AccountServices.getUserAccounts({ userId: req.user._id });
+      
+      ResponseHandler.createHandler(
+        res,
+        accounts,
+        "account fetched successfully",
+      );
+    } catch (error) {
+      ResponseHandler.errorHandler(res, error);
+    }
+  }
 }
 
 export default AccountController;

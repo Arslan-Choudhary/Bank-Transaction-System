@@ -14,6 +14,11 @@ class AccountServices {
 
     return account;
   }
+
+  static async getUserAccounts({ userId }) {
+    const accounts = await AccountRepository.getUserAccounts(userId);
+    return accounts
+  }
 }
 
 export default AccountServices;

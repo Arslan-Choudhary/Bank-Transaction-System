@@ -12,4 +12,14 @@ const accountRouter = express.Router();
 
 accountRouter.route("/").post(authMiddleware, AccountController.createAccount);
 
+/**
+ * - GET /api/accounts
+ * - Get all accounts of the logged-in user
+ * - Protected Route
+ */
+
+accountRouter
+  .route("/")
+  .get(authMiddleware, AccountController.getUserAccountsController);
+
 export default accountRouter;

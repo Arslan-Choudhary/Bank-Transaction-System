@@ -8,6 +8,10 @@ class AccountRepository {
   static async createAccount(id) {
     return await accountModel.create({ user: id });
   }
+
+  static async getUserAccounts(userId) {
+    return await accountModel.find({ user: userId });
+  }
 }
 
 export default AccountRepository;
