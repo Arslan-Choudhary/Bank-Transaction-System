@@ -1,35 +1,38 @@
 import mongoose from "mongoose";
 
-const ledgerSchema = new mongoose.Schema({
-  account: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "account",
-    required: [true, "Ledger must be associated with an account"],
-    index: true,
-    immutable: true,
-  },
-  amount: {
-    type: Number,
-    required: [true, "Amount is required for creating a ledger entry"],
-    immutable: true,
-  },
-  transaction: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Transaction",
-    required: [true, "Ledger must be accociated with a transaction"],
-    index: true,
-    immutable: true,
-  },
-  type: {
-    type: String,
-    enum: {
-      values: ["CREDIT", "DEBIT"],
-      message: "Type can be either CREDIT or DEBIT",
+const ledgerSchema = new mongoose.Schema(
+  {
+    account: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "account",
+      required: [true, "Ledger must be associated with an account"],
+      index: true,
+      immutable: true,
     },
-    required: [true, "Ledger must be required"],
-    immutable: true,
+    amount: {
+      type: Number,
+      required: [true, "Amount is required for creating a ledger entry"],
+      immutable: true,
+    },
+    transaction: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Transaction",
+      required: [true, "Ledger must be accociated with a transaction"],
+      index: true,
+      immutable: true,
+    },
+    type: {
+      type: String,
+      enum: {
+        values: ["CREDIT", "DEBIT"],
+        message: "Type can be either CREDIT or DEBIT",
+      },
+      required: [true, "Ledger must be required"],
+      immutable: true,
+    },
   },
-});
+  { timestamps: true },
+);
 
 function preventLedgerModification() {
   throw new Error(

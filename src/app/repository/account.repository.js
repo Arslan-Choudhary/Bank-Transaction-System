@@ -12,6 +12,10 @@ class AccountRepository {
   static async getUserAccounts(userId) {
     return await accountModel.find({ user: userId });
   }
+
+  static async getUserAccount(accountId, userId) {
+    return await accountModel.findOne({ _id: accountId, user: userId });
+  }
 }
 
 export default AccountRepository;

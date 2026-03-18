@@ -22,4 +22,12 @@ accountRouter
   .route("/")
   .get(authMiddleware, AccountController.getUserAccountsController);
 
+/**
+ * - GET /api/accounts/balance/:accountId
+ */
+
+accountRouter
+  .route("/balance/:accountId")
+  .get(authMiddleware, AccountController.getAccountBalanceController);
+
 export default accountRouter;

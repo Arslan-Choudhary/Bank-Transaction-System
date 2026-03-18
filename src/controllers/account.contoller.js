@@ -20,12 +20,31 @@ class AccountController {
 
   static async getUserAccountsController(req, res) {
     try {
-      const accounts = await AccountServices.getUserAccounts({ userId: req.user._id });
+      const accounts = await AccountServices.getUserAccounts({
+        userId: req.user._id,
+      });
+
       
+
       ResponseHandler.createHandler(
         res,
         accounts,
         "account fetched successfully",
+      );
+    } catch (error) {
+      ResponseHandler.errorHandler(res, error);
+    }
+  }
+
+  static async getAccountBalanceController(req, res) {
+    try {
+      const { accountId } = req.params;
+      const userId = req.user._id;
+      const data = await AccountServices.getUserAccount(accountId, userId);
+      ResponseHandler.successHandler(
+        res,
+        data,
+        "balance fetched successfully",
       );
     } catch (error) {
       ResponseHandler.errorHandler(res, error);

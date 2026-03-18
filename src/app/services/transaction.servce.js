@@ -75,7 +75,7 @@ class TransacrionService {
      */
     if (
       fromUserAccount.status !== "ACTIVE" ||
-      toUserAccount.status !== "Active"
+      toUserAccount.status !== "ACTIVE"
     ) {
       const error = new Error(
         "Both fromAccount and toAccount must be ACTIVE to process transaction",
@@ -98,49 +98,62 @@ class TransacrionService {
       throw error;
     }
 
-    /**
-     * 5. Create transaction (PENDING)
-     */
-    const session = await mongoose.startSession();
-    session.startTransaction();
+    let transaction;
+    try {
+      /**
+       * 5. Create transaction (PENDING)
+       */
+      const session = await mongoose.startSession();
+      session.startTransaction();
 
-    const transaction = await TransactionRepository.createTransaction(
-      {
-        fromAccount,
-        toAccount,
-        amount,
-        idempotencyKey,
-        status: "PENDING",
-      },
-      session,
-    );
+      transaction = await TransactionRepository.createTransaction(
+        {
+          fromAccount,
+          toAccount,
+          amount,
+          idempotencyKey,
+          status: "PENDING",
+        },
+        session,
+      );
 
-    const debitLedgerEntry = await LedgerRepository.createLedger(
-      {
-        account: fromAccount,
-        amount,
-        transaction: transaction._id,
-        type: "DEBIT",
-      },
-      session,
-    );
+      const debitLedgerEntry = await LedgerRepository.createLedger(
+        {
+          account: fromAccount,
+          amount,
+          transaction: transaction._id,
+          type: "DEBIT",
+        },
+        session,
+      );
 
-    const creditLedgerEntry = await LedgerRepository.createLedger(
-      {
-        account: toAccount,
-        amount,
-        transaction: transaction._id,
-        type: "CREDIT",
-      },
-      session,
-    );
+      await (() => {
+        return new Promise((resolve) => setTimeout(resolve, 10 * 1000));
+      })();
 
-    transaction.status = "COMPLETED";
+      const creditLedgerEntry = await LedgerRepository.createLedger(
+        {
+          account: toAccount,
+          amount,
+          transaction: transaction._id,
+          type: "CREDIT",
+        },
+        session,
+      );
 
-    await transaction.save({ session });
+      transaction.status = "COMPLETED";
 
-    await session.commitTransaction();
-    session.endSession();
+      await transaction.save({ session });
+
+      await session.commitTransaction();
+      session.endSession();
+    } catch (err) {
+      const error = new Error(
+        "Transaction is Pending due to some issue, please retry after sometime",
+      );
+      error.status = 400;
+      throw error;
+    }
 
     return { transaction, message: "Transaction completed successfully" };
 
