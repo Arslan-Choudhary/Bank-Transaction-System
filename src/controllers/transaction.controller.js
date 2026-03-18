@@ -31,8 +31,6 @@ class TransactionController {
     try {
       const { toAccount, amount, idempotencyKey } = req.body;
 
-      // const userId = req.user._id;
-
       const { transaction, message } =
         await TransacrionService.createInitialFundsTransaction({
           toAccount,

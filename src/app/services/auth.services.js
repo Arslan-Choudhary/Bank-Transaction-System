@@ -1,9 +1,7 @@
-import { userModel } from "#models";
 import { UserRepository } from "#repository";
 
 class UserServices {
   static async UserRegister(email, password, name) {
-    // const isExists = await userModel.findOne({ email });
     const isExists = await UserRepository.FindByEmail(email);
 
     if (isExists) {
@@ -12,7 +10,6 @@ class UserServices {
       throw error;
     }
 
-    // const user = await userModel.create({ email, password, name });
     const user = await UserRepository.createUser({ email, password, name });
 
     const token = user.generateToken();

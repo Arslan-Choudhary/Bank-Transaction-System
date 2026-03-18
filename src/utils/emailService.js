@@ -1,5 +1,3 @@
-// require('dotenv').config();
-// const nodemailer = require('nodemailer');
 import nodemailer from "nodemailer";
 import ENV from "#env";
 
@@ -23,8 +21,6 @@ transporter.verify((error, success) => {
   }
 });
 
-// module.exports = transporter;
-
 // Function to send email
 const sendEmail = async (to, subject, text, html) => {
   try {
@@ -42,8 +38,6 @@ const sendEmail = async (to, subject, text, html) => {
     console.error("Error sending email:", error);
   }
 };
-
-// module.exports = sendEmail;
 
 class EmailServices {
   static async sendRegistrationEmail(userEmail, name) {

@@ -63,7 +63,6 @@ export async function authSystemUserMiddleware(req, res, next) {
 
     return next();
   } catch (error) {
-    // console.log(error);
     ResponseHandler.authHandler(
       res,
       "Unauthorized access, token is invalid",
@@ -71,5 +70,3 @@ export async function authSystemUserMiddleware(req, res, next) {
     );
   }
 }
-
-// export default authMiddleware;

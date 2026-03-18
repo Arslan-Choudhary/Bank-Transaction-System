@@ -35,8 +35,6 @@ class UserController {
       await EmailServices.sendRegistrationEmail(user.email, user.name);
     } catch (error) {
       ResponseHandler.errorHandler(res, error);
-      //   return res.status(500).json({ error: error });
-      // console.log(error)
     }
   }
 

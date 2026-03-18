@@ -1,8 +1,8 @@
 import app from "#server";
 import { userRouter, accountRouter, transactionRoutes } from "#routes";
 
-app.get("/", (req, res) => {
-  res.send("Backend is live and running");
+app.get("/", (_, res) => {
+  res.send("Backend ledger is live and running");
 });
 
 /**

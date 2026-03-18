@@ -9,13 +9,13 @@ import "#models";
 const PORT = ENV.port;
 
 connectDB()
-    .then(
-        app.listen(PORT || 3000, (error) =>
-            error
-                ? Logger.serverLogger.logError(error)
-                : console.log(`Server running on port ${PORT}`)
-        )
-    )
-    .catch((err) => {
-        console.log("MONGO db connection failed !!! ", err);
-    });
+  .then(
+    app.listen(PORT || 3000, (error) =>
+      error
+        ? Logger.serverLogger.logError(error)
+        : console.log(`Server running on port ${PORT}`),
+    ),
+  )
+  .catch((err) => {
+    console.log("MONGO db connection failed !!! ", err);
+  });

@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 import { TransactionRepository, LedgerRepository } from "#repository";
-// import { EmailServices } from "#utils";
 
 class TransacrionService {
   static async createTransaction({
@@ -12,8 +11,6 @@ class TransacrionService {
     /**
      * 1. validate request
      */
-
-    // const { fromAccount, toAccount, amount, idempotencyKey } = data;
 
     if (!fromAccount || !toAccount || !amount || !idempotencyKey) {
       const error = new Error(
@@ -160,7 +157,6 @@ class TransacrionService {
     /**
      * 6. Send email notification
      */
-    //  await EmailServices.sendTransactionEmail(req.user.email)
   }
 
   static async createInitialFundsTransaction({
