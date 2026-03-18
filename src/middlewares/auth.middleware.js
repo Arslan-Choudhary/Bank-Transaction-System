@@ -10,6 +10,12 @@ export async function authMiddleware(req, res, next) {
     ResponseHandler.authHandler(res, "Unauthorized access, token is missing");
   }
 
+  const isBlackListed = await UserRepository.FindToken(token);
+
+  if (isBlackListed) {
+    ResponseHandler.authHandler(res, "Unauthorized access, token is Invalid");
+  }
+
   try {
     const decoded = jwt.verify(token, ENV.JWT_SECRET);
 
@@ -32,6 +38,12 @@ export async function authSystemUserMiddleware(req, res, next) {
 
   if (!token) {
     ResponseHandler.authHandler(res, "Unauthorized access, token is missing");
+  }
+
+  const isBlackListed = await UserRepository.FindToken(token);
+
+  if (isBlackListed) {
+    ResponseHandler.authHandler(res, "Unauthorized access, token is Invalid");
   }
 
   try {

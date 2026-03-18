@@ -74,6 +74,29 @@ class UserController {
       ResponseHandler.errorHandler(res, error);
     }
   }
+
+  /**
+   * - User Logout Controller
+   * - POST /api/auth/logout
+   */
+  static async userLogoutController(req, res) {
+    try {
+      const token =
+        req.cookies.token || req.headers.authorization?.split(" ")[1];
+
+      const blackListedToken = await UserServices.logoutUser(token);
+
+      res.clearCookie("token");
+
+      ResponseHandler.successHandler(
+        res,
+        blackListedToken,
+        "User logged out successfully",
+      );
+    } catch (error) {
+      ResponseHandler.errorHandler(res, error);
+    }
+  }
 }
 
 export default UserController;

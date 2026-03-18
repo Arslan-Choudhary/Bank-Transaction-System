@@ -41,6 +41,18 @@ class UserServices {
 
     return { user, token };
   }
+
+  static async logoutUser(token) {
+    if (!token) {
+      const error = new Error("User already logged out");
+      error.status = 400;
+      throw error;
+    }
+
+    const blackListedToken = await UserRepository.logoutUser(token);
+
+    return blackListedToken;
+  }
 }
 
 export default UserServices;

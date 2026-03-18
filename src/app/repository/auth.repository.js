@@ -1,4 +1,4 @@
-import { userModel } from "#models";
+import { userModel, tokenBlackListModel } from "#models";
 
 class UserRepository {
   static async FindByEmail(email) {
@@ -15,6 +15,14 @@ class UserRepository {
 
   static async createUser(data) {
     return await userModel.create(data);
+  }
+
+  static async logoutUser(token) {
+    return await tokenBlackListModel.create({ token });
+  }
+
+  static async FindToken(token) {
+    return await tokenBlackListModel.findOne({ token });
   }
 }
 

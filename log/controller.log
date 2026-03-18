@@ -354,3 +354,19 @@ ReferenceError: transaction is not defined
     at TransacrionService.createTransaction (file:///C:/code/Backend/Bank%20Transactions/src/app/services/transaction.servce.js:157:14)
     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
     at async createTransaction (file:///C:/code/Backend/Bank%20Transactions/src/controllers/transaction.controller.js:10:9)
+18-3-2026 06:41:51 AM error: res.cookies is not a function
+TypeError: res.cookies is not a function
+    at userLogoutController (file:///C:/code/Backend/Bank%20Transactions/src/controllers/auth.controller.js:89:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+18-3-2026 06:42:43 AM error: Token is already blacklisted
+MongooseError: Token is already blacklisted
+    at Schema._transformDuplicateKeyError (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\schema.js:3067:12)
+    at model.$__save (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\model.js:471:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async model.save (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\model.js:642:5)
+    at async C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\model.js:2778:9
+    at async Promise.all (index 0)
+    at async Function.create (C:\code\Backend\Bank Transactions\node_modules\mongoose\lib\model.js:2763:11)
+    at async UserRepository.logoutUser (file:///C:/code/Backend/Bank%20Transactions/src/app/repository/auth.repository.js:21:12)
+    at async UserServices.logoutUser (file:///C:/code/Backend/Bank%20Transactions/src/app/services/auth.services.js:52:30)
+    at async userLogoutController (file:///C:/code/Backend/Bank%20Transactions/src/controllers/auth.controller.js:87:32)
