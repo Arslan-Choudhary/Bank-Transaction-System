@@ -1,12 +1,12 @@
 {
-  "name": "backend-template",
+  "name": "bank-transaction",
   "version": "1.0.0",
   "description": "",
   "main": "src/app.js",
   "type": "module",
   "scripts": {
     "dev": "nodemon main",
-    "start": "pm2 start src/app.js --name template-8000 --max-memory-restart=3G"
+    "start": "pm2 start src/app.js --name transaction-8000 --max-memory-restart=3G"
   },
   "keywords": [],
   "author": "",
