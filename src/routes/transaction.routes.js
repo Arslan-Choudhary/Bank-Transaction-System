@@ -1,6 +1,11 @@
 import express from "express";
-import { authMiddleware, authSystemUserMiddleware } from "#middlewares";
+import {
+  authMiddleware,
+  authSystemUserMiddleware,
+  Validation,
+} from "#middlewares";
 import { TransactionController } from "#controllers";
+import { SchemaValidation } from "#utils";
 
 const transactionRoutes = express.Router();
 
@@ -10,7 +15,11 @@ const transactionRoutes = express.Router();
  */
 transactionRoutes
   .route("/")
-  .post(authMiddleware, TransactionController.createTransaction);
+  .post(
+    authMiddleware,
+    Validation.validateRegister(SchemaValidation.createTransactionSchema),
+    TransactionController.createTransaction,
+  );
 
 /**
  * - POST /api/transactions/system/initial-funds
@@ -20,6 +29,9 @@ transactionRoutes
   .route("/system/initial-funds")
   .post(
     authSystemUserMiddleware,
+    Validation.validateRegister(
+      SchemaValidation.createInitialFundsTransactionSchema,
+    ),
     TransactionController.createInitialFundsTransaction,
   );
 

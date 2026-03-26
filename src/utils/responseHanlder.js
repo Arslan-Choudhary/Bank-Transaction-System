@@ -21,7 +21,7 @@ class ResponseHandler {
         status: error.status
           ? error.status
           : ServerResponse.API_STATUS_CODE.INTERNAL_SERVER_ERROR,
-        message: error.message,
+        message: error.message || error,
       });
     if (error.logging === false) return "";
     Logger.controllerLogger.logError(error);
@@ -44,8 +44,7 @@ class ResponseHandler {
     status = ServerResponse.API_STATUS_CODE.AUTHORIZATION_FAILED,
   ) {
     const error = new Error(message);
-    error.status =
-      status;
+    error.status = status;
 
     Logger.authLogger.logError(error);
     return res

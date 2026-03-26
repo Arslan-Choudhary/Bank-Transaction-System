@@ -1,6 +1,7 @@
 import express from "express";
-import { authMiddleware } from "#middlewares";
+import { authMiddleware, Validation } from "#middlewares";
 import { AccountController } from "#controllers";
+import { SchemaValidation } from "#utils";
 
 const accountRouter = express.Router();
 
@@ -10,7 +11,13 @@ const accountRouter = express.Router();
  * - protected route
  */
 
-accountRouter.route("/").post(authMiddleware, AccountController.createAccount);
+accountRouter
+  .route("/")
+  .post(
+    authMiddleware,
+    Validation.validateRegister(SchemaValidation.createAccountSchema),
+    AccountController.createAccount,
+  );
 
 /**
  * - GET /api/accounts
